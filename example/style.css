@@ -1,0 +1,114 @@
+html{
+  /*font-size: 32px;*/
+}
+
+html *{
+  max-height: 100000000px;
+}
+
+body{
+  margin: 0 0 0 0;
+  color: #333;
+  font-family: 'Lato', sans-serif;
+  font-size: 32px;
+}
+
+.container{
+  margin: 8px;
+}
+
+#source{
+  border-style: solid;
+  border-color: #aaa;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  background-image: linear-gradient(to right, #34517e, #00567a, #005969, #00584e, #165531);
+  font-size: 4rem;
+}
+
+header .row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a{
+  text-decoration: none;
+  color: white;
+}
+
+header h1{
+  font-weight: 200;
+}
+
+header svg{
+  fill: currentColor;
+  width: 0.8em;
+}
+
+.logo{
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 5rem;
+}
+
+.center{
+  text-align: center;
+}
+
+.vcenter{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.padding-10{
+  padding: 10px;
+}
+
+.flex-item {
+  /*padding: 5px;*/
+  text-align: center;
+}
+
+/* from https://www.w3schools.com/howto/howto_js_tabs.asp */
+.tabular {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabular button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 0.75em;
+}
+
+.tabular button:hover {
+    background-color: #ddd;
+}
+
+.tabular button.active {
+    background-color: #ccc;
+}
+
+#usage-content{
+  display: none;
+}

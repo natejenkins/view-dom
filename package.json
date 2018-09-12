@@ -1,0 +1,47 @@
+{
+  "name": "view-dom",
+  "version": "0.1.0",
+  "description": "A graphical tree view useful for debugging rich editors",
+  "main": "dist/view_dom.js",
+  "scripts": {
+    "build": "NODE_ENV=production ./node_modules/.bin/rollup -c",
+    "build-dev": "./node_modules/.bin/rollup -c",
+    "watch": "./node_modules/.bin/rollup -c --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natejenkins/view-dom.git"
+  },
+  "keywords": [
+    "rich",
+    "contentEditable",
+    "wysiwyg",
+    "editor",
+    "text",
+    "html",
+    "tree"
+  ],
+  "author": "Nathan Jenkins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/natejenkins/view-dom/issues"
+  },
+  "homepage": "https://github.com/natejenkins/view-dom#readme",
+  "dependencies": {
+    "d3": "^5.7.0"
+  },
+  "devDependencies": {
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "rollup": "^0.65.2",
+    "rollup-plugin-commonjs": "^9.1.6",
+    "rollup-plugin-eslint": "^5.0.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-terser": "^2.0.2",
+    "rollup-plugin-uglify-es": "0.0.1",
+    "rollup-watch": "^4.3.1"
+  }
+}

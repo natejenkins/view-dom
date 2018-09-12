@@ -1,0 +1,73 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no;user-scalable=0;"/>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href='example/style.css'></link>
+</head>
+<body>
+<div id="body"></div>
+<header>
+    <div class='logo'><a href='https://github.com/natejenkins/view_dom'>ViewDom.js</a></div>
+    <div class='vcenter padding-10'>
+      <a class='flex-item padding-10' href='https://github.com/natejenkins/view_dom'>
+          <svg aria-labelledby="simpleicons-github-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-github-icon">GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+      <div class='flex-item padding-10' >|</div>
+      <a class='flex-item padding-10' href='https://github.com/natejenkins/view_dom/blob/master/README.md'>
+        docs
+      </a>
+    </div>
+
+</header>
+
+<div class='container'>
+<div class='center padding-10'>
+  An interactive tree view of a dom node, useful for debugging html rich editors.
+</div>
+
+<div class="tabular">
+  <div class='flex-item'>
+    <button class='tab example' id='ex1'>Ex 1</button>
+    <button class='tab example' id='ex2'>Ex 2</button>
+    <button class='tab example' id='ex3'>Ex With Selection</button>
+  </div>
+  <div class='flex-item'>
+    <button class='tab' id='bold-button'><b>B</b></button>
+    <button class='tab' id='italic-button'><i>I</i></button>
+    <button class='tab' id='underline-button'><u>U</u></button>
+  </div>
+  <div class='flex-item'>
+    <button class='tab' id='usage-button'>Usage</button>
+  </div>
+</div>
+
+<div id="usage-content">
+  <h3>Instructions:</h3>
+  <div>
+    The graphical tree view shows the contents of the editor.  The current
+    cursor position is shown as a vertical bar in the respective tree node.
+  </div>
+  <h3>Colors</h3>
+  <div>
+    A green rectangle around a node signifies that the current selection range start is somewhere inside the node.  A green link signifies the current selection range start points at the child node.  A red rectangle or link signifies the end of a selection.  If a rectangle or link is purple, it signifies both the start and end of the current selection.  Any node which is not editable will be pink.
+  </div>
+  <h3>Setting the selection via the tree view</h3>
+  <div>
+    You can click on any node or link in the tree view to set the start of the current selection and that position will be reflected in the editor.  Holding down ctrl or shift while clicking will set the selection end.
+  </div>
+  <h3>Zero-width characters</h3>
+  <div>
+    Zero-width characters will show up as a * in the tree view.  This can be configured when setting up ViewDom.
+  </div>
+</div>
+<div id="source" contentEditable="true"></div>
+<div id="d3"></div>
+</div>
+
+</body>
+
+<script src="dist/view_dom.js"></script>
+<script src='example/index.js'></script>
+
